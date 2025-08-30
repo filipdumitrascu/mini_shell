@@ -24,7 +24,7 @@ The details of the functionalities that must be implemented will be further expl
 #### Changing the Current Directory
 
 The shell will support a built-in command for navigating the file system, called `cd`.
-To implement this feature you will need to store the current directory path because the user can provide either relative or absolute paths as arguments to the `cd` command.
+The current directory path is stored because the user can provide either relative or absolute paths as arguments to the `cd` command.
 
 The built-in `pwd` command will show the current directory path.
 
@@ -54,7 +54,7 @@ Inputting either `quit` or `exit` should close the minishell.
 
 Suppose you have an executable named `sum` in the current directory.
 It takes arbitrarily many numbers as arguments and prints their sum to `stdout`.
-The following example shows how the minishell implemented by you should behave.
+The following example shows how the minishell implemented should behave.
 
 ```sh
 > ./sum 2 4 1
@@ -72,8 +72,8 @@ Each application will run in a separate child process of the minishell created u
 
 #### Environment Variables
 
-Your shell will support using environment variables.
-The environment variables will be initially inherited from the `bash` process that started your minishell application.
+The shell will support using environment variables.
+The environment variables will be initially inherited from the `bash` process that started the minishell application.
 
 If an undefined variable is used, its value is the empty string: `""`.
 
@@ -188,11 +188,9 @@ Hint: Look into [open](https://man7.org/linux/man-pages/man2/open.2.html), [dup2
 The support code consists of three directories:
 
 - `src/` is the skeleton mini-shell implementation.
-  You will have to implement missing parts marked as `TODO` items.
 
 - `util/` stores a parser to be used as support code for implementing the assignment.
   For more information, you can check the `util/parser/README.md` file.
-  You can use this parser or write your own.
 
 ### Building mini-shell
 
